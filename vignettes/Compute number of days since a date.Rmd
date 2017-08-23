@@ -29,4 +29,4 @@ DaysSinceWhen <- function(dob)
     DaysOld <- as.numeric(difftime(Sys.time(),dob, units = "days"))
     return(DaysOld)
     }
-< "Those who are lucky do not count their days">
+
