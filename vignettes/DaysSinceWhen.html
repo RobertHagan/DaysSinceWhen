@@ -1,0 +1,95 @@
+<html>
+
+<head>
+<style type="text/css">
+.knitr .inline {
+  background-color: #f7f7f7;
+  border:solid 1px #B0B0B0;
+}
+.error {
+	font-weight: bold;
+	color: #FF0000;
+}
+.warning {
+	font-weight: bold;
+}
+.message {
+	font-style: italic;
+}
+.source, .output, .warning, .error, .message {
+	padding: 0 1em;
+  border:solid 1px #F7F7F7;
+}
+.source {
+  background-color: #f5f5f5;
+}
+.rimage .left {
+  text-align: left;
+}
+.rimage .right {
+  text-align: right;
+}
+.rimage .center {
+  text-align: center;
+}
+.hl.num {
+  color: #AF0F91;
+}
+.hl.str {
+  color: #317ECC;
+}
+.hl.com {
+  color: #AD95AF;
+  font-style: italic;
+}
+.hl.opt {
+  color: #000000;
+}
+.hl.std {
+  color: #585858;
+}
+.hl.kwa {
+  color: #295F94;
+  font-weight: bold;
+}
+.hl.kwb {
+  color: #B05A65;
+}
+.hl.kwc {
+  color: #55aa55;
+}
+.hl.kwd {
+  color: #BC5A65;
+  font-weight: bold;
+}
+</style>
+<title>DaysSinceWhen</title>
+</head>
+
+
+<body>
+
+<p>DaysSinceWhen("date") returns a digital value of the number of days since
+the date entered.  This simple function can be enhanced if needed to include
+time zones, etc. </p>
+
+Please see the extensive details on the DaysSinceWhen() package and function in its help file  i.e. ?DaysSinceWhen
+
+The following example may be of assistance if an integer value is needed:</p>
+
+NumDays <- as.integer(DaysSinceWhen("2000-1-1"))</p>
+
+Please observe the use of "as.integer()" above</p>
+
+</p>
+The function implemented in the package has the same name as the package:<\p>
+<div class="chunk" id="unnamed-chunk-1"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl std">DaysSinceWhen</span> <span class="hl kwb">&lt;-</span> <span class="hl kwa">function</span><span class="hl std">(</span><span class="hl kwc">dob</span><span class="hl std">) {</span>
+  <span class="hl std">DaysOld</span> <span class="hl kwb">&lt;-</span> <span class="hl kwd">as.numeric</span><span class="hl std">(</span><span class="hl kwd">difftime</span><span class="hl std">(</span><span class="hl kwd">Sys.time</span><span class="hl std">(),dob,</span> <span class="hl kwc">units</span> <span class="hl std">=</span> <span class="hl str">&quot;days&quot;</span><span class="hl std">))</span>
+  <span class="hl kwd">return</span><span class="hl std">(DaysOld)</span>
+<span class="hl std">}</span>
+</pre></div>
+</div></div>
+
+
+</body>
+</html>

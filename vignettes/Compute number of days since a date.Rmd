@@ -1,0 +1,32 @@
+---
+title: "Computing the number of days since a date"
+author: "Robert Hagan"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+It is often important to know the number of days since an event.  This package provides a function for that purpose.  
+
+As an example, some nutrition assessment methodologies are based upon the age of child in "days" to utilize a look-up table to compute z-score values for the child.
+
+Usage possibilities include:
+
+- DaysSinceWhen("2000-1-1")
+- NumDays <- DaysSinceWhen("2000-1-1") and 
+- NumDays <- as.integer(DaysSinceWhen("2000-1-1"))
+
+## Important: Please use as.integer(DaysSinceWhen("date"")) to obtain  an integer
+    value for the number of days since the date entered.
+
+## DaysSinceWhen Code for an non-integer return value""
+
+DaysSinceWhen <- function(dob)
+   {
+    DaysOld <- as.numeric(difftime(Sys.time(),dob, units = "days"))
+    return(DaysOld)
+    }
+< "Those who are lucky do not count their days">

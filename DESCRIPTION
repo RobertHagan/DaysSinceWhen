@@ -1,0 +1,14 @@
+Package: DaysSinceWhen
+Title: What the Package Does (one line, title case)
+Version: 0.0.0.9000
+Authors@R: person("Robert", "Hagan", email = "RobertHagan@gmail.com", role = c("aut", "cre"))
+Description: A function in this package (DaysSinceWhen) computes the number of
+    days sine the provided data in "yyyy-mm-dd" format.
+Depends: R (>= 3.4.1)
+License: MIT
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
+Suggests: knitr,
+    rmarkdown
+VignetteBuilder: knitr
