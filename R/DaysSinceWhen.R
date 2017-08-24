@@ -1,6 +1,6 @@
 #' DaysSinceWhen
 #'
-#' Computes the number of days that have passed since
+#' Computes the digital number of days that have passed since
 #'     the date entered.
 #'
 #' @param dob A character string in the form "yyyy-mm-dd"

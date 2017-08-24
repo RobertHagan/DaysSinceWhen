@@ -19,13 +19,38 @@ NumDays <- as.integer(DaysSinceWhen("2000-1-1"))</p>
 
 Please observe the use of "as.integer()" above</p>
 
-</p>
+It is often important to know the number of days since an event.  This package provides a function for that purpose.
+
+As an example, some nutrition assessment methodologies are based upon the age of child in "days" to utilize a look-up table to compute z-score values for the child.
+
+
+Usage possibilities include:
+
+
 The function implemented in the package has the same name as the package:<\p>
 <!--begin.rcode
 DaysSinceWhen <- function(dob) {
   DaysOld <- as.numeric(difftime(Sys.time(),dob, units = "days"))
   return(DaysOld)
 }
+end.rcode-->
+
+
+<\p>
+- DaysSinceWhen("2000-1-1")<\p>
+- NumDays <- DaysSinceWhen("2000-1-1") and <\p>
+- NumDays <- as.integer(DaysSinceWhen("2000-1-1")) <\p>
+<\p>
+Important: Please use as.integer(DaysSinceWhen("date"")) to obtain  an integer
+    value for the number of days since the date entered.<\p>
+<\p>
+DaysSinceWhen Code for an non-integer return value<\p>
+<!--begin.rcode
+DaysSinceWhen <- function(dob)
+   {
+    DaysOld <- as.numeric(difftime(Sys.time(),dob, units = "days"))
+    return(DaysOld)
+    }
 end.rcode-->
 
 

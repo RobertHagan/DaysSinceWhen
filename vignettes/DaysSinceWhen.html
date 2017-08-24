@@ -81,12 +81,37 @@ NumDays <- as.integer(DaysSinceWhen("2000-1-1"))</p>
 
 Please observe the use of "as.integer()" above</p>
 
-</p>
+It is often important to know the number of days since an event.  This package provides a function for that purpose.
+
+As an example, some nutrition assessment methodologies are based upon the age of child in "days" to utilize a look-up table to compute z-score values for the child.
+
+
+Usage possibilities include:
+
+
 The function implemented in the package has the same name as the package:<\p>
 <div class="chunk" id="unnamed-chunk-1"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl std">DaysSinceWhen</span> <span class="hl kwb">&lt;-</span> <span class="hl kwa">function</span><span class="hl std">(</span><span class="hl kwc">dob</span><span class="hl std">) {</span>
   <span class="hl std">DaysOld</span> <span class="hl kwb">&lt;-</span> <span class="hl kwd">as.numeric</span><span class="hl std">(</span><span class="hl kwd">difftime</span><span class="hl std">(</span><span class="hl kwd">Sys.time</span><span class="hl std">(),dob,</span> <span class="hl kwc">units</span> <span class="hl std">=</span> <span class="hl str">&quot;days&quot;</span><span class="hl std">))</span>
   <span class="hl kwd">return</span><span class="hl std">(DaysOld)</span>
 <span class="hl std">}</span>
+</pre></div>
+</div></div>
+
+
+<\p>
+- DaysSinceWhen("2000-1-1")<\p>
+- NumDays <- DaysSinceWhen("2000-1-1") and <\p>
+- NumDays <- as.integer(DaysSinceWhen("2000-1-1")) <\p>
+<\p>
+Important: Please use as.integer(DaysSinceWhen("date"")) to obtain  an integer
+    value for the number of days since the date entered.<\p>
+<\p>
+DaysSinceWhen Code for an non-integer return value<\p>
+<div class="chunk" id="unnamed-chunk-2"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl std">DaysSinceWhen</span> <span class="hl kwb">&lt;-</span> <span class="hl kwa">function</span><span class="hl std">(</span><span class="hl kwc">dob</span><span class="hl std">)</span>
+   <span class="hl std">{</span>
+    <span class="hl std">DaysOld</span> <span class="hl kwb">&lt;-</span> <span class="hl kwd">as.numeric</span><span class="hl std">(</span><span class="hl kwd">difftime</span><span class="hl std">(</span><span class="hl kwd">Sys.time</span><span class="hl std">(),dob,</span> <span class="hl kwc">units</span> <span class="hl std">=</span> <span class="hl str">&quot;days&quot;</span><span class="hl std">))</span>
+    <span class="hl kwd">return</span><span class="hl std">(DaysOld)</span>
+    <span class="hl std">}</span>
 </pre></div>
 </div></div>
 

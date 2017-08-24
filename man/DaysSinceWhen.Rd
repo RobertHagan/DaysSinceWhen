@@ -13,7 +13,7 @@ DaysSinceWhen(dob)
 a numeric decimal numeric value
 }
 \description{
-Computes the number of days that have passed since
+Computes the digital number of days that have passed since
     the date entered.
 }
 \examples{
